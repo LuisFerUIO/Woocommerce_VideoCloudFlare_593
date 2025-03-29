@@ -36,3 +36,8 @@ require_once plugin_dir_path( __FILE__ ) . 'src/inc/class-cloudflare-stream-shor
  * Block Initializer.
  */
 require_once plugin_dir_path( __FILE__ ) . 'src/init.php';
+
+/**
+ * Block Initializer.
+ */
+require_once plugin_dir_path(__FILE__) . 'src/inc/display-video.php';
