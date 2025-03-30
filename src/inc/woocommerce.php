@@ -26,11 +26,32 @@ function cf_stream_add_video_to_gallery($attachment_ids, $product) {
 add_filter('woocommerce_product_get_gallery_image_ids', 'cf_stream_add_video_to_gallery', 10, 2);
 
 // Agregar script para abrir el video en un modal al hacer clic
+//function cf_stream_enqueue_scripts() {
+//    wp_enqueue_script('cf-stream-video-lightbox', plugin_dir_url(__FILE__) . '../../assets/js/cf-stream-lightbox.js', ['jquery'], null, true);
+//    wp_enqueue_style('cf-stream-video-lightbox', plugin_dir_url(__FILE__) . '../../assets/css/cf-stream-lightbox.css');
+//}
+//add_action('wp_enqueue_scripts', 'cf_stream_enqueue_scripts');
+
 function cf_stream_enqueue_scripts() {
-    wp_enqueue_script('cf-stream-video-lightbox', plugin_dir_url(__FILE__) . 'js/cf-stream-lightbox.js', ['jquery'], null, true);
-    wp_enqueue_style('cf-stream-video-lightbox', plugin_dir_url(__FILE__) . 'css/cf-stream-lightbox.css');
+    // Encolar el JavaScript
+    wp_enqueue_script(
+        'cf-stream-video-lightbox',
+        plugins_url( 'assets/js/cf-stream-lightbox.js', __FILE__ ),
+        array('jquery'),
+        null,
+        true
+    );
+
+    // Encolar el CSS
+    wp_enqueue_style(
+        'cf-stream-video-lightbox',
+        plugins_url( 'assets/css/cf-stream-lightbox.css', __FILE__ )
+    );
 }
 add_action('wp_enqueue_scripts', 'cf_stream_enqueue_scripts');
+
+
+
 
 // Agregar el modal HTML al pie de la página
 function cf_stream_add_video_modal() {
