@@ -38,6 +38,8 @@ require_once plugin_dir_path( __FILE__ ) . 'src/inc/class-cloudflare-stream-shor
 require_once plugin_dir_path( __FILE__ ) . 'src/init.php';
 
 /**
- * Block Initializer.
+ * FER
  */
 require_once plugin_dir_path(__FILE__) . 'src/inc/display-video.php';
+
+require_once plugin_dir_path(__FILE__) . 'src/inc/woocommerce.php';

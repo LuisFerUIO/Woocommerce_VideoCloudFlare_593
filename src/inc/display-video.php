@@ -6,7 +6,7 @@ function cf_stream_show_video() {
 
     if (!empty($video_id)) {
         echo '<div class="cf-stream-video-container">';
-        echo '<iframe src="https://customer-xxxxx.cloudflarestream.com/' . esc_attr($video_id) . '/iframe" 
+        echo '<iframe src="https://customer-xd1ajhckvre3vwhu.cloudflarestream.com/' . esc_attr($video_id) . '/iframe" 
                 width="100%" height="400" allow="autoplay; encrypted-media" frameborder="0">
               </iframe>';
         echo '</div>';
