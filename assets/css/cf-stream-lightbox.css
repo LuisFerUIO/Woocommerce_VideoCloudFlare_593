@@ -1,0 +1,38 @@
+/* Estilos para el modal de video */
+.cf-stream-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cf-stream-modal-content {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    background: #000;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cf-stream-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#cf-stream-video-frame {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
