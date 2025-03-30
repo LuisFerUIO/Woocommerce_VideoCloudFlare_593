@@ -42,3 +42,14 @@ require_once plugin_dir_path( __FILE__ ) . 'src/init.php';
  */
 require_once plugin_dir_path(__FILE__) . 'src/inc/display-video.php';
 require_once plugin_dir_path(__FILE__) . 'src/inc/woocommerce.php';
+
+// Registrar el meta campo para los productos
+function cf_stream_register_video_meta() {
+    register_post_meta( 'product', '_cf_stream_video_id', array(
+        'type'         => 'string',
+        'description'  => 'Cloudflare Video ID',
+        'single'       => true,
+        'show_in_rest' => true, // Se expone en la API REST y Gutenberg
+    ) );
+}
+add_action( 'init', 'cf_stream_register_video_meta' );
